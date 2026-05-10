@@ -1,0 +1,50 @@
+package personnages;
+
+public class Humain {
+	private String nom;
+	private String boissonFavorite;
+	private int quantiteArgent;
+	
+	public Humain(String nom, String boissonFavorite, int quantiteArgent) {
+		this.nom = nom;
+		this.boissonFavorite = boissonFavorite;
+		this.quantiteArgent = quantiteArgent;
+	}
+
+	public int getQuantiteArgent() {
+		return quantiteArgent;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+	
+	private void parler(String texte) {
+		System.out.println("("+nom+") - "+texte);
+	}
+	public void direBonjour() {
+		parler("Bonjour ! Je m'apelle "+nom+" et j'aime boire du "+boissonFavorite+".");
+	}
+	
+	public void boire() {
+		parler("Mmmm, un bon verre de "+boissonFavorite+" ! GLOUPS !");
+	}
+	
+	private void perdreArgent(int perte) {
+		this.quantiteArgent-=perte;
+	}
+	
+	private void gagnerArgent(int gain) {
+		this.quantiteArgent+=gain;
+	}
+	
+	public void acheter(String bien, int prix) {
+		if (prix<=quantiteArgent) {
+			parler("J'ai "+quantiteArgent+" sous en poche. Je vais pouvoir m'offrir "+bien+" à "+prix+" sous.");
+			perdreArgent(prix);
+		}
+		else {
+			parler("J'ai n'ai plus que "+quantiteArgent+" sous en poche. Je ne peux même pas m'offrir "+bien+" à "+prix+" sous.");
+		}
+	}
+}
