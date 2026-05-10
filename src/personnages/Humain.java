@@ -24,7 +24,7 @@ public class Humain {
 	}
 	
 	public void direBonjour() {
-		parler("Bonjour ! Je m'apelle "+nom+" et j'aime boire du "+boissonFavorite+".");
+		parler("Bonjour ! Je m'appelle "+nom+" et j'aime boire du "+boissonFavorite+".");
 	}
 	
 	public void boire() {
@@ -45,7 +45,7 @@ public class Humain {
 			perdreArgent(prix);
 		}
 		else {
-			parler("J'ai n'ai plus que "+quantiteArgent+" sous en poche. Je ne peux même pas m'offrir "+bien+" à "+prix+" sous.");
+			parler("Je n'ai plus que "+quantiteArgent+" sous en poche. Je ne peux même pas m'offrir "+bien+" à "+prix+" sous.");
 		}
 	}
 }
