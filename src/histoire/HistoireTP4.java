@@ -11,7 +11,7 @@ public class HistoireTP4 {
 		prof.acheter("un jeu", 2);
 		prof.acheter("un kimono", 50);
 		
-		Commercant marco = new Commercant("marco", 20);
+		Commercant marco = new Commercant("Marco", 20);
 		marco.seFaireExtorquer();
 		marco.recevoir(15);
 		marco.boire();
@@ -20,5 +20,8 @@ public class HistoireTP4 {
 		yaku.direBonjour();
 		yaku.extorquer(marco);
 		
+		Ronin roro = new Ronin("Roro", "shochu", 60);
+		roro.direBonjour();
+		roro.donner(marco);
 	}
 }
