@@ -19,9 +19,10 @@ public class Humain {
 		return nom;
 	}
 	
-	private void parler(String texte) {
+	protected void parler(String texte) {
 		System.out.println("("+nom+") - "+texte);
 	}
+	
 	public void direBonjour() {
 		parler("Bonjour ! Je m'apelle "+nom+" et j'aime boire du "+boissonFavorite+".");
 	}
@@ -30,11 +31,11 @@ public class Humain {
 		parler("Mmmm, un bon verre de "+boissonFavorite+" ! GLOUPS !");
 	}
 	
-	private void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		this.quantiteArgent-=perte;
 	}
 	
-	private void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		this.quantiteArgent+=gain;
 	}
 	
