@@ -12,7 +12,7 @@ public class Samourai extends Ronin{
 	@Override
 	public void direBonjour() {
 		super.direBonjour();
-		parler("Je suis fier de servir le seigner "+nomSeigneur+".");
+		parler("Je suis fier de servir le seigneur "+nomSeigneur+".");
 	}
 	
 	public void boire(String boisson) {

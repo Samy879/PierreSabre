@@ -1,0 +1,30 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Humain {
+    + getNom(): String
+    + direBonjour(): void
+    + boire(): void
+    - memoriser(ami: Humain): void
+}
+
+class Ronin {
+    + provoquer(adversaire: Samourai): void
+}
+
+class Samourai {
+    + direBonjour(): void
+    + boire(boisson: String): void
+}
+
+class Traitre {
+    + direBonjour(): void
+    + ranconner(victime: Humain): void
+}
+
+' Relations d'héritage
+Humain <|-- Ronin
+Ronin <|-- Samourai
+Samourai <|-- Traitre
+
+@enduml

@@ -4,7 +4,7 @@ public class Humain {
 	private String nom;
 	private String boissonFavorite;
 	private int quantiteArgent;
-	protected int nbConnaissance;
+	protected int nbConnaissance = 0;
 	protected Humain[] memoire = new Humain[30];
 	
 	public Humain(String nom, String boissonFavorite, int quantiteArgent) {
@@ -51,7 +51,7 @@ public class Humain {
 		}
 	}
 
-	private void memoriser(Humain homme) {
+	protected void memoriser(Humain homme) {
 		
 		memoire[nbConnaissance%(memoire.length)]=homme;
 		nbConnaissance++;

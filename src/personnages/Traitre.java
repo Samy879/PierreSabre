@@ -1,10 +1,10 @@
 package personnages;
 import java.util.Random;
-import java.util.random.*;
 
 public class Traitre extends Samourai{
 
 	private int niveauTraitrise = 0;
+	private Random random = new Random();
 	
 	public Traitre(String nomSeigneur, String nom, String boissonFavorite, int quantiteArgent) {
 		super(nomSeigneur, nom, boissonFavorite, quantiteArgent);
@@ -25,7 +25,6 @@ public class Traitre extends Samourai{
 			int don = (int)(getQuantiteArgent() * 1./20);
 			
 			int limite = Math.min(nbConnaissance, memoire.length);
-			Random random = new Random();
 			int rand = random.nextInt(limite);
 			
 			Humain ami = memoire[rand];
