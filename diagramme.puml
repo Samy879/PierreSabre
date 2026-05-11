@@ -22,9 +22,15 @@ class Traitre {
     + ranconner(victime: Humain): void
 }
 
+class GrandMere {
+    + ragoter(): void
+    - memoriser(ami: Humain): void
+}
+
 ' Relations d'héritage
 Humain <|-- Ronin
 Ronin <|-- Samourai
 Samourai <|-- Traitre
+Humain <|-- GrandMere
 
 @enduml
